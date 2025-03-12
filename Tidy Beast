@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tidy Beast - Cleaning Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Hero Section */
+.hero {
+    background: url('cleaning-service.jpg') no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: Black;
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    border-left: 10px solid #2c3e50;
+    border-right: 10px solid #2c3e50;
+}
+
+/* Main Container */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    border: 10px solid #2c3e50;
+    border-radius: 10px;
+    padding: 20px;
+    background: white;
+}
+
+/* Sections */
+.section {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border: 2px solid #2c3e50;
+}
+
+/* Service Listing */
+.service {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.service-item {
+    flex: 1;
+    margin: 10px;
+    padding: 15px;
+    background: #e3e3e3;
+    border: 2px solid #2c3e50;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Booking Form */
+.booking-form input, 
+.booking-form select, 
+.booking-form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #2c3e50;
+    border-radius: 5px;
+}
+.booking-form button {
+    background: #2c3e50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.booking-form button:hover {
+    background: #1a252f;
+}
+
+/* Contact Section */
+.section a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: bold;
+}
+.section a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 0 0 10px 10px;
+}
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Tidy Beast - Professional Cleaning Services</h2>
+        <sub>happy home makes happy story</sub>
+</header>
+    <div class="hero">
+        Sparkle Your Space with Tidy Beast
+    </div>
+    <div class="container">
+        <div class="section">
+            <h2>About Us</h2>
+            <p><br> At Tidy Beast, we specialize in delivering top-quality cleaning solutions for homes and businesses. Our expert team ensures your space is spotless, sanitized, and refreshed, creating a clean and healthy environment. Whether it's regular home cleaning, deep cleaning, or specialized services like carpet and upholstery cleaning, we tailor our approach to meet your needs.</br>
+
+<br>We take pride in using eco-friendly products and advanced cleaning techniques to remove dirt, allergens, and bacteria, ensuring a pristine living and working space. Our professional and trustworthy staff are dedicated to providing exceptional service with a keen eye for detail.</br>
+
+<br>Let Tidy Beast transform your space into a fresh and inviting environment. Contact us today for reliable and affordable cleaning solutions!</br></p>
+        </div>
+        
+        <div class="booking-form section">
+            <h2>Book a Cleaning Service</h2>
+            <form>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="Phone.no">Phone.no:</label>
+                <input type="Phone.no" id="Phone.no" name="Phone.no" required>
+                <br>
+                
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Dropdown</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Select Your Cleaning Service</h2>
+
+        <!-- Main Dropdown -->
+        <label for="mainService">Choose Service Type:</label>
+        <select id="mainService" name="mainService" onchange="showSubDropdown()">
+            <option value="">Select</option>
+            <option value="home">Home Cleaning</option>
+            <option value="office">Office Cleaning</option>
+            <option value="carpet">Carpet & Upholstery Cleaning</option>
+        </select>
+
+        <!-- Additional Dropdown (Hidden Initially) -->
+        <div id="subServiceContainer" style="display: none;">
+            <label for="subService">Select Specific Service:</label>
+            <select id="subService" name="subService">
+                <option value="">Select</option>
+            </select>
+        
+    <script>
+        function showSubDropdown() {
+            let mainDropdown = document.getElementById("mainService");
+            let subDropdown = document.getElementById("subService");
+            let subContainer = document.getElementById("subServiceContainer");
+
+            // Clear previous options
+            subDropdown.innerHTML = '<option value="">Select</option>';
+
+            if (mainDropdown.value === "home") {
+                subDropdown.innerHTML += '<option value="basic">Basic Cleaning</option>';
+                subDropdown.innerHTML += '<option value="deep">Deep Cleaning</option>';
+                subDropdown.innerHTML += '<option value="move">Move-in/Move-out Cleaning</option>';
+            } else if (mainDropdown.value === "office") {
+                subDropdown.innerHTML += '<option value="daily">Daily Cleaning</option>';
+                subDropdown.innerHTML += '<option value="weekly">Weekly Cleaning</option>';
+                subDropdown.innerHTML += '<option value="sanitization">Full Office Sanitization</option>';
+            } else if (mainDropdown.value === "carpet") {
+                subDropdown.innerHTML += '<option value="shampoo">Carpet Shampooing</option>';
+                subDropdown.innerHTML += '<option value="sofa">Sofa Cleaning</option>';
+                subDropdown.innerHTML += '<option value="mattress">Mattress Cleaning</option>';
+            }
+
+            // Show Sub Dropdown only if a valid service is selected
+            subContainer.style.display = mainDropdown.value ? "block" : "none";
+        }
+    </script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    
+           </select>
+                <br>
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" name="date" required>
+                <br>
+                <div class="message-container">
+                <label for="Description">Description</label>
+                <input type="Description" id="Description" name="Description"
+                <br> 
+
+<!-- Submit Button -->
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+
+</body>
+</html>
+
+                
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Box</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        
+
+    <script>
+        function sendMessage() {
+            let message = document.getElementById("messageBox").value;
+            if (message.trim() === "") {
+                document.getElementById("response").innerHTML = "⚠️ Please enter a message!";
+            } else {
+                document.getElementById("response").innerHTML = "✅ Message sent successfully!";
+                document.getElementById("messageBox").value = ""; // Clear input
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+            </form>
+        </div>
+        <div class="section">
+            <h2>Contact Us</h2>
+            <p>Email: bunnybstn@gmail.com</p>
+            <p>Phone: (+91)9959047238</p>
+            <p>Location: <a href="https://www.google.com/maps/search/?api=1&query=HUDA+Techno+Enclave,+HITEC+City,+Hyderabad,+Telangana+500081" target="_blank">HUDA Techno Enclave, HITEC City, Hyderabad, Telangana 500081</a></p>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 Tidy Beast. All rights reserved.
+    </footer>
+</body>
+</html>
